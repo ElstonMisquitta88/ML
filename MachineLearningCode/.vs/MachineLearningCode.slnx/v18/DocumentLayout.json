@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\GitHub\\ML\\MachineLearningCode\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{06E8C7A4-527D-0C2C-6C50-1593FDB81C94}|MachineLearningCode\\MachineLearningCode.csproj|d:\\github\\ml\\machinelearningcode\\machinelearningcode\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06E8C7A4-527D-0C2C-6C50-1593FDB81C94}|MachineLearningCode\\MachineLearningCode.csproj|solutionrelative:machinelearningcode\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\GitHub\\ML\\MachineLearningCode\\MachineLearningCode\\Program.cs",
+              "RelativeDocumentMoniker": "MachineLearningCode\\Program.cs",
+              "ToolTip": "D:\\GitHub\\ML\\MachineLearningCode\\MachineLearningCode\\Program.cs",
+              "RelativeToolTip": "MachineLearningCode\\Program.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwCEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-07T05:30:09.453Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
