@@ -23,5 +23,15 @@ namespace MachineLearningCode.Data
                 new InsuranceData { Age = 100, Premium = 21000 }
             };
         }
+
+        public static List<InsuranceData> GetTestData()
+        {
+            return new List<InsuranceData>
+                {
+                    new InsuranceData { Age = 80, Premium = 16000 },
+                    new InsuranceData { Age = 90, Premium = 18000 },
+                    new InsuranceData { Age = 100, Premium = 20000 }
+                };
+        }
     }
 }

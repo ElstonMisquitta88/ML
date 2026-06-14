@@ -1,5 +1,6 @@
 ﻿using MachineLearningCode.Data;
 using Microsoft.ML;
+using Microsoft.ML.AutoML;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -37,13 +38,155 @@ namespace MachineLearningCode
             // (5) Try to predict the premium for a new data point with Age = 25
             var pe = mlconext.Model.CreatePredictionEngine<InsuranceData, InsurancePrediction>(model); // Create a prediction engine'
             var prediction = pe.Predict(new InsuranceData { Age = 54 }); // Predict the premium for a new data point with Age = 25
-            
+
             Console.WriteLine($"Predicted Premium for Age 54: {prediction.PredictedPremium}"); // Output the predicted premium
 
         }
 
+        public static void Lab2_SimplestMLCodeUsingTestData()
+        {
+            var mlcontext = new MLContext();
+            var data = mlcontext.Data.LoadFromEnumerable(DataRegression.GetLinearInsuranceData()); // Data
+            var testdata = mlcontext.Data.LoadFromEnumerable(DataRegression.GetTestData()); // Data
+
+            var pipeline = mlcontext.Transforms
+                                    .Concatenate("Features", "Age")
+                                    .Append(
+                                     mlcontext.Regression.Trainers
+                                     .Ols(labelColumnName: "Premium",
+                                            featureColumnName: "Features"
+                                      ));
+            var model = pipeline.Fit(data); // execution = data + Ols ==> Model
+            var predictions = model.Transform(testdata); // prediction
+
+            var predictionEnumerable = mlcontext.Data.
+                                            CreateEnumerable<InsurancePrediction>(predictions, reuseRowObject: false).ToList();
+
+            foreach (var prediction in predictionEnumerable)
+            {
+                Console.WriteLine(prediction.PredictedPremium);
+            }
+
+            Console.Read();
+        }
 
 
+        public static void Lab3and4_SimplestMLCodeCheckingRSandRMSE()
+        {
+            var mlcontext = new MLContext();
+            var data = mlcontext.Data.LoadFromEnumerable(DataRegression.GetLinearInsuranceData()); // Data
+            var testdata = mlcontext.Data.LoadFromEnumerable(DataRegression.GetTestData()); // Data
+
+            var pipeline = mlcontext.Transforms // f1 = Age + Salary
+                                    .Concatenate("Features", "Age")
+                                    .Append(
+                                     mlcontext.Regression.Trainers
+                                            //.Ols(labelColumnName: "Premium",
+                                            .Sdca(labelColumnName: "Premium",
+                                            featureColumnName: "Features"
+                                      ));
+            var model = pipeline.Fit(data); // execution = data + Ols ==> Model
+            var predictions = model.Transform(testdata); // prediction
+
+            var metrics = mlcontext.Regression.Evaluate(predictions, labelColumnName: "Premium", scoreColumnName: "Score");
+
+            Console.WriteLine($"R-Squared: {metrics.RSquared}");
+            Console.WriteLine($"RMSE: {metrics.RootMeanSquaredError}");
+
+            Console.Read();
+        }
+
+
+        // -----------------------------------------------------------
+        // ----------------  AUTO ML  --------------------------------
+        // -----------------------------------------------------------
+        public static void Lab5_SimplestMLAutoMl()
+        {
+            var mlcontext = new MLContext();
+            var data = mlcontext.Data.LoadFromEnumerable(DataRegression.GetLinearInsuranceData()); // Data
+            var testdata = mlcontext.Data.LoadFromEnumerable(DataRegression.GetTestData()); // Data
+
+            var experimentSettings = new RegressionExperimentSettings
+            {
+                MaxExperimentTimeInSeconds = 30 // try every model for x sec
+            };
+            var experiment = mlcontext.Auto().CreateRegressionExperiment(experimentSettings);
+            var result = experiment.Execute(data, labelColumnName: "Premium");
+            foreach (var run in result.RunDetails)
+            {
+                Console.WriteLine($"Model: {run.TrainerName}");
+                Console.WriteLine($"R²: {run.ValidationMetrics.RSquared}");
+                Console.WriteLine($"RMSE: {run.ValidationMetrics.RootMeanSquaredError}");
+                Console.WriteLine("------------------------------------");
+            }
+            var bestModel = result.BestRun.Model;
+            Console.WriteLine($"Best Model: {result.BestRun.TrainerName}");
+            Console.Read();
+        }
+        public static void Lab6_SimplestMLAutoMlWithHugeData()
+        {
+            var mlContext = new MLContext();
+            var data = mlContext.Data.LoadFromTextFile<InsuranceData>(
+            path: "D:\\GitHub\\ML\\MachineLearningCode\\MachineLearningCode\\Data\\linear_insurance_100k.csv",   // your CSV file path
+            hasHeader: true,
+            separatorChar: ',');
+
+            var experimentSettings = new RegressionExperimentSettings
+            {
+
+                MaxExperimentTimeInSeconds = 30 // try every nodel for x sec
+            };
+            var experiment = mlContext.Auto().CreateRegressionExperiment(experimentSettings);
+            var result = experiment.Execute(data, labelColumnName: "Premium");
+            foreach (var run in result.RunDetails)
+            {
+                Console.WriteLine($"Model: {run.TrainerName}");
+                Console.WriteLine($"R²: {run.ValidationMetrics.RSquared}");
+                Console.WriteLine($"RMSE: {run.ValidationMetrics.RootMeanSquaredError}");
+                Console.WriteLine("------------------------------------");
+            }
+            // Get best model
+            var bestModel = result.BestRun.Model;
+            Console.WriteLine($"Best Model: {result.BestRun.TrainerName}");
+
+
+            //Outout >> Best Model: ReplaceMissingValues=>Concatenate=>FastForestRegression
+        }
+
+        public static void Lab6_SimplestMLAutoMlWithHugeData_Sample_Data_TestData()
+        {
+            var mlContext = new MLContext();
+            
+            var data = mlContext.Data.LoadFromTextFile<InsuranceData>(
+             path: "D:\\GitHub\\ML\\MachineLearningCode\\MachineLearningCode\\Data\\linear_insurance_100k.csv",   // your CSV file path
+             hasHeader: true,
+             separatorChar: ',');
+            var splitData = mlContext.Data.TrainTestSplit(data, testFraction: 0.2);
+
+            var trainData = splitData.TrainSet;
+            var testData = splitData.TestSet;
+
+            var pipeline = mlContext.Transforms
+                                    .Concatenate("Features", "Age")
+                                    .Append(
+                                     mlContext.Regression.Trainers
+                                     .FastForest(labelColumnName: "Premium",
+                                            featureColumnName: "Features"
+                                      ));
+            var model = pipeline.Fit(trainData); // Model created - example : gpt 1.0
+
+            // prediction
+            var predictions = model.Transform(testData); 
+            var predictionEnumerable = mlContext.Data.
+                                            CreateEnumerable<InsurancePrediction>(predictions, reuseRowObject: false).ToList();
+
+            foreach (var prediction in predictionEnumerable)
+            {
+                Console.WriteLine($"Age: {prediction.Age}, Predicted Premium: {prediction.PredictedPremium}");
+            }
+
+            Console.Read();
+        }
 
 
     }

@@ -20,6 +20,8 @@ namespace MachineLearningCode
         }
         public class InsurancePrediction
         {
+            public float Age { get; set; }
+
             [ColumnName("Score")]
             public float PredictedPremium { get; set; }
         }
