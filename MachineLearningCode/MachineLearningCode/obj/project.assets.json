@@ -92,15 +92,15 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
-      "Microsoft.Bcl.Memory/9.0.4": {
+      "Microsoft.Bcl.Memory/10.0.9": {
         "type": "package",
         "compile": {
-          "lib/net9.0/Microsoft.Bcl.Memory.dll": {
+          "lib/net10.0/Microsoft.Bcl.Memory.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net9.0/Microsoft.Bcl.Memory.dll": {
+          "lib/net10.0/Microsoft.Bcl.Memory.dll": {
             "related": ".xml"
           }
         },
@@ -1426,21 +1426,22 @@
         "microsoft.bcl.hashcode.nuspec"
       ]
     },
-    "Microsoft.Bcl.Memory/9.0.4": {
-      "sha512": "uVvex/6jngf2R5KT77AOSqNv81hpiLr0Mt54xUNUTU8IwNrLIJjHCBxfznEJYA1MlZ5Dt/2TIW6rHhv7DVmDyQ==",
+    "Microsoft.Bcl.Memory/10.0.9": {
+      "sha512": "Ot6xtHSjibECjp8mP41wch9GUSeGTXtUUc7M2MthKtiFmvPBMpvp6d8RwBJOtg/ia5PE0iR05PRy1ZVBAOmaeQ==",
       "type": "package",
-      "path": "microsoft.bcl.memory/9.0.4",
+      "path": "microsoft.bcl.memory/10.0.9",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
-        "LICENSE.TXT",
         "PACKAGE.md",
         "THIRD-PARTY-NOTICES.TXT",
         "buildTransitive/net461/Microsoft.Bcl.Memory.targets",
         "buildTransitive/net462/_._",
         "buildTransitive/net8.0/_._",
         "buildTransitive/netcoreapp2.0/Microsoft.Bcl.Memory.targets",
+        "lib/net10.0/Microsoft.Bcl.Memory.dll",
+        "lib/net10.0/Microsoft.Bcl.Memory.xml",
         "lib/net462/Microsoft.Bcl.Memory.dll",
         "lib/net462/Microsoft.Bcl.Memory.xml",
         "lib/net8.0/Microsoft.Bcl.Memory.dll",
@@ -1451,7 +1452,7 @@
         "lib/netstandard2.0/Microsoft.Bcl.Memory.xml",
         "lib/netstandard2.1/Microsoft.Bcl.Memory.dll",
         "lib/netstandard2.1/Microsoft.Bcl.Memory.xml",
-        "microsoft.bcl.memory.9.0.4.nupkg.sha512",
+        "microsoft.bcl.memory.10.0.9.nupkg.sha512",
         "microsoft.bcl.memory.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -3193,6 +3194,7 @@
   },
   "projectFileDependencyGroups": {
     "net10.0": [
+      "Microsoft.Bcl.Memory >= 10.0.9",
       "Microsoft.ML >= 5.0.0",
       "Microsoft.ML.AutoML >= 0.23.0",
       "Microsoft.ML.Mkl.Components >= 5.0.0",
@@ -3252,6 +3254,10 @@
         "framework": "net10.0",
         "targetAlias": "net10.0",
         "dependencies": {
+          "Microsoft.Bcl.Memory": {
+            "target": "Package",
+            "version": "[10.0.9, )"
+          },
           "Microsoft.ML": {
             "target": "Package",
             "version": "[5.0.0, )"
@@ -3562,17 +3568,5 @@
         }
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1903",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'Microsoft.Bcl.Memory' 9.0.4 has a known high severity vulnerability, https://github.com/advisories/GHSA-73j8-2gch-69rq",
-      "libraryId": "Microsoft.Bcl.Memory",
-      "targetGraphs": [
-        "net10.0"
-      ]
-    }
-  ]
+  }
 }

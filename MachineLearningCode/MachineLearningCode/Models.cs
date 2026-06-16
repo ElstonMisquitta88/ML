@@ -26,6 +26,8 @@ namespace MachineLearningCode
             public float PredictedPremium { get; set; }
         }
 
+        //---------------------------------------------------------------
+
         public class FruitData
         {
             public float Weight { get; set; }
@@ -35,17 +37,18 @@ namespace MachineLearningCode
 
         }
 
-        public class CustomerData
-        {
-            public float Age { get; set; }
-            public float Spending { get; set; }
-        }
-
-        public class CustomerCluster
+        public class FruitPrediction
         {
             [ColumnName("PredictedLabel")]
-            public uint PredictedClusterId { get; set; }
-            //public float[] Score { get; set; }
+            public bool PredictedLabelBool { get; set; }
+
+            // convenience string representation (not used by ML.NET)
+            public string PredictedLabel => PredictedLabelBool ? "True" : "False";
+
+            public float Score { get; set; }
+            public float Probability { get; set; }
         }
+
+ 
     }
 }

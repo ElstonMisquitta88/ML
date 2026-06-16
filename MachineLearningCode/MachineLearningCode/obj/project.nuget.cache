@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "c9GANQPekok=",
+  "dgSpecHash": "BtYJe7cHQIM=",
   "success": true,
   "projectFilePath": "D:\\GitHub\\ML\\MachineLearningCode\\MachineLearningCode\\MachineLearningCode.csproj",
   "expectedPackageFiles": [
@@ -10,7 +10,7 @@
     "C:\\Users\\Elston\\.nuget\\packages\\methodboundaryaspect.fody\\2.0.148\\methodboundaryaspect.fody.2.0.148.nupkg.sha512",
     "C:\\Users\\Elston\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\9.0.4\\microsoft.bcl.asyncinterfaces.9.0.4.nupkg.sha512",
     "C:\\Users\\Elston\\.nuget\\packages\\microsoft.bcl.hashcode\\6.0.0\\microsoft.bcl.hashcode.6.0.0.nupkg.sha512",
-    "C:\\Users\\Elston\\.nuget\\packages\\microsoft.bcl.memory\\9.0.4\\microsoft.bcl.memory.9.0.4.nupkg.sha512",
+    "C:\\Users\\Elston\\.nuget\\packages\\microsoft.bcl.memory\\10.0.9\\microsoft.bcl.memory.10.0.9.nupkg.sha512",
     "C:\\Users\\Elston\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\3.11.0\\microsoft.codeanalysis.analyzers.3.11.0.nupkg.sha512",
     "C:\\Users\\Elston\\.nuget\\packages\\microsoft.codeanalysis.common\\4.13.0\\microsoft.codeanalysis.common.4.13.0.nupkg.sha512",
     "C:\\Users\\Elston\\.nuget\\packages\\microsoft.codeanalysis.csharp\\4.13.0\\microsoft.codeanalysis.csharp.4.13.0.nupkg.sha512",
@@ -52,18 +52,5 @@
     "C:\\Users\\Elston\\.nuget\\packages\\tensorflow.net\\0.100.2\\tensorflow.net.0.100.2.nupkg.sha512",
     "C:\\Users\\Elston\\.nuget\\packages\\torchsharp\\0.102.7\\torchsharp.0.102.7.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1903",
-      "level": "Warning",
-      "message": "Package 'Microsoft.Bcl.Memory' 9.0.4 has a known high severity vulnerability, https://github.com/advisories/GHSA-73j8-2gch-69rq",
-      "projectPath": "D:\\GitHub\\ML\\MachineLearningCode\\MachineLearningCode\\MachineLearningCode.csproj",
-      "warningLevel": 1,
-      "filePath": "D:\\GitHub\\ML\\MachineLearningCode\\MachineLearningCode\\MachineLearningCode.csproj",
-      "libraryId": "Microsoft.Bcl.Memory",
-      "targetGraphs": [
-        "net10.0"
-      ]
-    }
-  ]
+  "logs": []
 }

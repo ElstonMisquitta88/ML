@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v10.0": {
       "MachineLearningCode/1.0.0": {
         "dependencies": {
+          "Microsoft.Bcl.Memory": "10.0.9",
           "Microsoft.ML": "5.0.0",
           "Microsoft.ML.AutoML": "0.23.0",
           "Microsoft.ML.Mkl.Components": "5.0.0",
@@ -73,11 +74,11 @@
           }
         }
       },
-      "Microsoft.Bcl.Memory/9.0.4": {
+      "Microsoft.Bcl.Memory/10.0.9": {
         "runtime": {
-          "lib/net9.0/Microsoft.Bcl.Memory.dll": {
-            "assemblyVersion": "9.0.0.4",
-            "fileVersion": "9.0.425.16305"
+          "lib/net10.0/Microsoft.Bcl.Memory.dll": {
+            "assemblyVersion": "10.0.0.9",
+            "fileVersion": "10.0.926.27113"
           }
         }
       },
@@ -310,7 +311,7 @@
           "LightGBM": "4.6.0",
           "Microsoft.Bcl.AsyncInterfaces": "9.0.4",
           "Microsoft.Bcl.HashCode": "6.0.0",
-          "Microsoft.Bcl.Memory": "9.0.4",
+          "Microsoft.Bcl.Memory": "10.0.9",
           "Microsoft.CodeAnalysis.CSharp": "4.13.0",
           "Microsoft.Extensions.DependencyInjection": "9.0.4",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.4",
@@ -783,7 +784,7 @@
           "Google.Protobuf": "3.30.2",
           "Microsoft.Bcl.AsyncInterfaces": "9.0.4",
           "Microsoft.Bcl.HashCode": "6.0.0",
-          "Microsoft.Bcl.Memory": "9.0.4",
+          "Microsoft.Bcl.Memory": "10.0.9",
           "Microsoft.ML": "5.0.0",
           "Microsoft.ML.ImageAnalytics": "5.0.0",
           "Microsoft.ML.Tokenizers": "2.0.0",
@@ -1039,12 +1040,12 @@
       "path": "microsoft.bcl.hashcode/6.0.0",
       "hashPath": "microsoft.bcl.hashcode.6.0.0.nupkg.sha512"
     },
-    "Microsoft.Bcl.Memory/9.0.4": {
+    "Microsoft.Bcl.Memory/10.0.9": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-uVvex/6jngf2R5KT77AOSqNv81hpiLr0Mt54xUNUTU8IwNrLIJjHCBxfznEJYA1MlZ5Dt/2TIW6rHhv7DVmDyQ==",
-      "path": "microsoft.bcl.memory/9.0.4",
-      "hashPath": "microsoft.bcl.memory.9.0.4.nupkg.sha512"
+      "sha512": "sha512-Ot6xtHSjibECjp8mP41wch9GUSeGTXtUUc7M2MthKtiFmvPBMpvp6d8RwBJOtg/ia5PE0iR05PRy1ZVBAOmaeQ==",
+      "path": "microsoft.bcl.memory/10.0.9",
+      "hashPath": "microsoft.bcl.memory.10.0.9.nupkg.sha512"
     },
     "Microsoft.CodeAnalysis.Common/4.13.0": {
       "type": "package",

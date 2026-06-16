@@ -33,5 +33,25 @@ namespace MachineLearningCode.Data
                     new InsuranceData { Age = 100, Premium = 20000 }
                 };
         }
+
+
+        public static List<FruitData> GetFruitData()
+        {
+            var samples = new[]
+            {
+            new FruitData { Weight = 150, Color = "Red",   IsApple = true,  FruitType = "Apple" },
+            new FruitData { Weight = 130, Color = "Green", IsApple = true,  FruitType = "Apple" },
+            new FruitData { Weight = 110, Color = "Yellow",IsApple = false, FruitType = "Banana" },
+            new FruitData { Weight = 180, Color = "Yellow",IsApple = false, FruitType = "Banana" },
+            new FruitData { Weight = 200, Color = "Orange",IsApple = false, FruitType = "Orange" },
+            new FruitData { Weight = 220, Color = "Orange",IsApple = false, FruitType = "Orange" },
+            new FruitData { Weight = 160, Color = "Green", IsApple = false, FruitType = "Mango" },
+            new FruitData { Weight = 170, Color = "Yellow",IsApple = false, FruitType = "Mango" },
+            new FruitData { Weight = 12, Color = "Black",IsApple = false, FruitType = "Berry" },
+
+            };
+
+            return samples.ToList();
+        }
     }
 }

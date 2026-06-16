@@ -4,6 +4,7 @@ using Microsoft.ML.AutoML;
 using Microsoft.ML.Trainers;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Text;
 using static MachineLearningCode.Models;
 
@@ -90,7 +91,26 @@ namespace MachineLearningCode
         }
 
 
+        public static void Lab8_LogisticCalssification()
+        {
+            var ml = new MLContext();
 
+            var data = ml.Data.LoadFromEnumerable(DataRegression.GetFruitData());
+
+            var pipeline =
+                        ml.Transforms.Concatenate("Features", "Weight")
+                        .Append(ml.BinaryClassification.Trainers.SdcaLogisticRegression(
+                        labelColumnName: "IsApple",
+                        featureColumnName: "Features"));
+
+            var model = pipeline.Fit(data);
+            var engine = ml.Model.CreatePredictionEngine<FruitData, FruitPrediction>(model);
+
+            var test = new FruitData { Weight = 12 };
+            var result = engine.Predict(test);
+
+            Console.WriteLine(result.PredictedLabel);
+        }
 
 
     }
