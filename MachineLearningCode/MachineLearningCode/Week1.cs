@@ -130,6 +130,9 @@ namespace MachineLearningCode
             path: "D:\\GitHub\\ML\\MachineLearningCode\\MachineLearningCode\\Data\\linear_insurance_100k.csv",   // your CSV file path
             hasHeader: true,
             separatorChar: ',');
+            //var splitData = mlContext.Data.TrainTestSplit(data, testFraction: 0.2);
+            //var trainData = splitData.TrainSet;
+            //var testData = splitData.TestSet;
 
             var experimentSettings = new RegressionExperimentSettings
             {
@@ -138,19 +141,19 @@ namespace MachineLearningCode
             };
             var experiment = mlContext.Auto().CreateRegressionExperiment(experimentSettings);
             var result = experiment.Execute(data, labelColumnName: "Premium");
-            foreach (var run in result.RunDetails)
-            {
-                Console.WriteLine($"Model: {run.TrainerName}");
-                Console.WriteLine($"R²: {run.ValidationMetrics.RSquared}");
-                Console.WriteLine($"RMSE: {run.ValidationMetrics.RootMeanSquaredError}");
-                Console.WriteLine("------------------------------------");
-            }
+            //foreach (var run in result.RunDetails)
+            //{
+            //    Console.WriteLine($"Model: {run.TrainerName}");
+            //    Console.WriteLine($"R²: {run.ValidationMetrics.RSquared}");
+            //    Console.WriteLine($"RMSE: {run.ValidationMetrics.RootMeanSquaredError}");
+            //    Console.WriteLine("------------------------------------");
+            //}
             // Get best model
             var bestModel = result.BestRun.Model;
             Console.WriteLine($"Best Model: {result.BestRun.TrainerName}");
 
 
-            //Outout >> Best Model: ReplaceMissingValues=>Concatenate=>FastForestRegression
+            //Outout >> Best Model: ReplaceMissingValues=>Concatenate=>>LightGbm
         }
 
         public static void Lab6_SimplestMLAutoMlWithHugeData_Sample_Data_TestData()
@@ -170,21 +173,17 @@ namespace MachineLearningCode
                                     .Concatenate("Features", "Age")
                                     .Append(
                                      mlContext.Regression.Trainers
-                                     .FastForest(labelColumnName: "Premium",
+                                     .LightGbm(labelColumnName: "Premium",
                                             featureColumnName: "Features"
                                       ));
             var model = pipeline.Fit(trainData); // Model created - example : gpt 1.0
 
-            // prediction
-            var predictions = model.Transform(testData); 
-            var predictionEnumerable = mlContext.Data.
-                                            CreateEnumerable<InsurancePrediction>(predictions, reuseRowObject: false).ToList();
 
-            foreach (var prediction in predictionEnumerable)
-            {
-                Console.WriteLine($"Age: {prediction.Age}, Predicted Premium: {prediction.PredictedPremium}");
-            }
+            // Prediction
+            var pe = mlContext.Model.CreatePredictionEngine<InsuranceData, InsurancePrediction>(model); // Create a prediction engine'
+            var prediction = pe.Predict(new InsuranceData { Age = 54 }); // Predict the premium for a new data point with Age = 25
 
+            Console.WriteLine($"Predicted Premium for Age 54: {prediction.PredictedPremium}"); // Output the predicted premium
             Console.Read();
         }
 

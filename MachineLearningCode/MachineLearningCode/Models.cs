@@ -25,5 +25,27 @@ namespace MachineLearningCode
             [ColumnName("Score")]
             public float PredictedPremium { get; set; }
         }
+
+        public class FruitData
+        {
+            public float Weight { get; set; }
+            public string Color { get; set; }
+            public bool IsApple { get; set; }   // True = Apple, False = Banana
+            public string FruitType { get; set; }
+
+        }
+
+        public class CustomerData
+        {
+            public float Age { get; set; }
+            public float Spending { get; set; }
+        }
+
+        public class CustomerCluster
+        {
+            [ColumnName("PredictedLabel")]
+            public uint PredictedClusterId { get; set; }
+            //public float[] Score { get; set; }
+        }
     }
 }

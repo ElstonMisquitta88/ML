@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "D:\\GitHub\\ML\\MachineLearningCode\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{06E8C7A4-527D-0C2C-6C50-1593FDB81C94}|MachineLearningCode\\MachineLearningCode.csproj|d:\\github\\ml\\machinelearningcode\\machinelearningcode\\week1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06E8C7A4-527D-0C2C-6C50-1593FDB81C94}|MachineLearningCode\\MachineLearningCode.csproj|solutionrelative:machinelearningcode\\week1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{06E8C7A4-527D-0C2C-6C50-1593FDB81C94}|MachineLearningCode\\MachineLearningCode.csproj|d:\\github\\ml\\machinelearningcode\\machinelearningcode\\week2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06E8C7A4-527D-0C2C-6C50-1593FDB81C94}|MachineLearningCode\\MachineLearningCode.csproj|solutionrelative:machinelearningcode\\week2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{06E8C7A4-527D-0C2C-6C50-1593FDB81C94}|MachineLearningCode\\MachineLearningCode.csproj|d:\\github\\ml\\machinelearningcode\\machinelearningcode\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{06E8C7A4-527D-0C2C-6C50-1593FDB81C94}|MachineLearningCode\\MachineLearningCode.csproj|solutionrelative:machinelearningcode\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06E8C7A4-527D-0C2C-6C50-1593FDB81C94}|MachineLearningCode\\MachineLearningCode.csproj|d:\\github\\ml\\machinelearningcode\\machinelearningcode\\data\\linear_insurance_100k.csv||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{06E8C7A4-527D-0C2C-6C50-1593FDB81C94}|MachineLearningCode\\MachineLearningCode.csproj|solutionrelative:machinelearningcode\\data\\linear_insurance_100k.csv||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -41,28 +37,20 @@
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "linear_insurance_100k.csv",
-              "DocumentMoniker": "D:\\GitHub\\ML\\MachineLearningCode\\MachineLearningCode\\Data\\linear_insurance_100k.csv",
-              "RelativeDocumentMoniker": "MachineLearningCode\\Data\\linear_insurance_100k.csv",
-              "ToolTip": "D:\\GitHub\\ML\\MachineLearningCode\\MachineLearningCode\\Data\\linear_insurance_100k.csv",
-              "RelativeToolTip": "MachineLearningCode\\Data\\linear_insurance_100k.csv",
-              "ViewState": "AgIAANMwAAAAAAAAAAAAAN4wAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002120|",
-              "WhenOpened": "2026-06-11T15:42:56.359Z"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{c6f34f0d-7ae5-4f3a-be61-fe0c21ae9eb8}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Week1.cs",
-              "DocumentMoniker": "D:\\GitHub\\ML\\MachineLearningCode\\MachineLearningCode\\Week1.cs",
-              "RelativeDocumentMoniker": "MachineLearningCode\\Week1.cs",
-              "ToolTip": "D:\\GitHub\\ML\\MachineLearningCode\\MachineLearningCode\\Week1.cs",
-              "RelativeToolTip": "MachineLearningCode\\Week1.cs",
-              "ViewState": "AgIAAJ8AAAAAAAAAAAAwwMAAAAAAAAAAAAAAAA==",
+              "Title": "Week2.cs",
+              "DocumentMoniker": "D:\\GitHub\\ML\\MachineLearningCode\\MachineLearningCode\\Week2.cs",
+              "RelativeDocumentMoniker": "MachineLearningCode\\Week2.cs",
+              "ToolTip": "D:\\GitHub\\ML\\MachineLearningCode\\MachineLearningCode\\Week2.cs",
+              "RelativeToolTip": "MachineLearningCode\\Week2.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAswFsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-08T16:00:00.904Z",
+              "WhenOpened": "2026-06-14T16:36:12.56Z",
               "EditorCaption": ""
             },
             {
@@ -73,9 +61,9 @@
               "RelativeDocumentMoniker": "MachineLearningCode\\Program.cs",
               "ToolTip": "D:\\GitHub\\ML\\MachineLearningCode\\MachineLearningCode\\Program.cs",
               "RelativeToolTip": "MachineLearningCode\\Program.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAqwA4AAABEAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-07T05:30:09.453Z",
+              "WhenOpened": "2026-06-14T16:45:52.23Z",
               "EditorCaption": ""
             }
           ]
