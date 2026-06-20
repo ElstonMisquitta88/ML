@@ -13,7 +13,7 @@ public class Program
         //Week1.Lab3and4_SimplestMLCodeCheckingRSandRMSE();
         //Week1.Lab6_SimplestMLAutoMlWithHugeData_Sample_Data_TestData();
 
-        Week2.Lab8_LogisticCalssification();
+        Week2.Lab10_SimpleCustering();
 
         Console.ReadLine();
     }

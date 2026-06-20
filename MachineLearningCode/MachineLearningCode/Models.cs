@@ -49,6 +49,24 @@ namespace MachineLearningCode
             public float Probability { get; set; }
         }
 
- 
+
+        public class FruitPrediction_Multiclass
+        {
+            public string PredictedLabel { get; set; }
+        }
+
+
+        public class CustomerData
+        {
+            public float Age { get; set; }
+            public float Spending { get; set; }
+        }
+
+        public class CustomerCluster
+        {
+            [ColumnName("PredictedLabel")]
+            public uint PredictedClusterId { get; set; }
+            //public float[] Score { get; set; }
+        }
     }
 }

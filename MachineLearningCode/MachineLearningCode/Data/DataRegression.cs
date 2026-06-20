@@ -53,5 +53,19 @@ namespace MachineLearningCode.Data
 
             return samples.ToList();
         }
+
+        public static List<CustomerData> GetCustomerData()
+        {
+            var customers = new[]
+            {
+                new CustomerData { Age = 22, Spending = 20000 },
+                new CustomerData { Age = 25, Spending = 23000 },
+                new CustomerData { Age = 45, Spending = 40000 },
+                new CustomerData { Age = 50, Spending = 42000 },
+                new CustomerData { Age = 65, Spending = 15000 },
+                new CustomerData { Age = 70, Spending = 12000 },
+            };
+            return customers.ToList<CustomerData>();
+        }
     }
 }

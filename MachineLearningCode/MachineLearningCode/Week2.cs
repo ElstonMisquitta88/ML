@@ -90,7 +90,10 @@ namespace MachineLearningCode
 
         }
 
+        //-------------------------------------------------------------------------------
+        // Classification
 
+        // Just Returns True if the fruit is an apple, False otherwise
         public static void Lab8_LogisticCalssification()
         {
             var ml = new MLContext();
@@ -106,10 +109,62 @@ namespace MachineLearningCode
             var model = pipeline.Fit(data);
             var engine = ml.Model.CreatePredictionEngine<FruitData, FruitPrediction>(model);
 
-            var test = new FruitData { Weight = 12 };
+            var test = new FruitData { Weight = 130 };
             var result = engine.Predict(test);
 
             Console.WriteLine(result.PredictedLabel);
+        }
+
+
+        // Returns the type of the fruit (Apple, Banana, Orange)
+        public static void Lab9_MulticlassCalssification()
+        {
+            var ml = new MLContext();
+
+            var data = ml.Data.LoadFromEnumerable(DataRegression.GetFruitData());
+
+            var pipeline =
+                ml.Transforms.Conversion.MapValueToKey("Label", nameof(FruitData.FruitType))
+                .Append(ml.Transforms.Categorical.OneHotEncoding("ColorEncoded", nameof(FruitData.Color)))
+                .Append(ml.Transforms.Concatenate("Features", "Weight", "ColorEncoded"))
+                .Append(ml.MulticlassClassification.Trainers.SdcaMaximumEntropy())
+                .Append(ml.Transforms.Conversion.MapKeyToValue("PredictedLabel"));
+
+            var model = pipeline.Fit(data);
+            var engine = ml.Model.CreatePredictionEngine<FruitData, FruitPrediction_Multiclass>(model);
+
+            var test = new FruitData
+            {
+                Weight = 110,
+                Color = "Yellow",
+
+            };
+
+            var result = engine.Predict(test);
+
+            Console.WriteLine($"Predicted Type: {result.PredictedLabel}");
+
+        }
+
+
+        public static void Lab10_SimpleCustering()
+        {
+            var ml = new MLContext();
+
+            var data = ml.Data.LoadFromEnumerable(DataRegression.GetCustomerData());
+
+            var pipeline = ml.Transforms.Concatenate("Features", "Age", "Spending")
+                .Append(ml.Clustering.Trainers.KMeans(numberOfClusters: 3));
+
+            var model = pipeline.Fit(data);
+
+            var engine = ml.Model.CreatePredictionEngine<CustomerData, CustomerCluster>(model);
+
+            var test = new CustomerData { Age = 55, Spending = 35000 };
+
+            var result = engine.Predict(test);
+
+            Console.WriteLine($"Cluster: {result.PredictedClusterId}");
         }
 
 
