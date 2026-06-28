@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "D:\\GitHub\\ML\\MachineLearningCode\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{06E8C7A4-527D-0C2C-6C50-1593FDB81C94}|MachineLearningCode\\MachineLearningCode.csproj|d:\\github\\ml\\machinelearningcode\\machinelearningcode\\week2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06E8C7A4-527D-0C2C-6C50-1593FDB81C94}|MachineLearningCode\\MachineLearningCode.csproj|solutionrelative:machinelearningcode\\week2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{06E8C7A4-527D-0C2C-6C50-1593FDB81C94}|MachineLearningCode\\MachineLearningCode.csproj|d:\\github\\ml\\machinelearningcode\\machinelearningcode\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{06E8C7A4-527D-0C2C-6C50-1593FDB81C94}|MachineLearningCode\\MachineLearningCode.csproj|solutionrelative:machinelearningcode\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{06E8C7A4-527D-0C2C-6C50-1593FDB81C94}|MachineLearningCode\\MachineLearningCode.csproj|d:\\github\\ml\\machinelearningcode\\machinelearningcode\\data\\dataregression.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06E8C7A4-527D-0C2C-6C50-1593FDB81C94}|MachineLearningCode\\MachineLearningCode.csproj|solutionrelative:machinelearningcode\\data\\dataregression.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{06E8C7A4-527D-0C2C-6C50-1593FDB81C94}|MachineLearningCode\\MachineLearningCode.csproj|d:\\github\\ml\\machinelearningcode\\machinelearningcode\\greetingplugin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06E8C7A4-527D-0C2C-6C50-1593FDB81C94}|MachineLearningCode\\MachineLearningCode.csproj|solutionrelative:machinelearningcode\\greetingplugin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{06E8C7A4-527D-0C2C-6C50-1593FDB81C94}|MachineLearningCode\\MachineLearningCode.csproj|d:\\github\\ml\\machinelearningcode\\machinelearningcode\\models.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06E8C7A4-527D-0C2C-6C50-1593FDB81C94}|MachineLearningCode\\MachineLearningCode.csproj|solutionrelative:machinelearningcode\\models.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{06E8C7A4-527D-0C2C-6C50-1593FDB81C94}|MachineLearningCode\\MachineLearningCode.csproj|d:\\github\\ml\\machinelearningcode\\machinelearningcode\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{06E8C7A4-527D-0C2C-6C50-1593FDB81C94}|MachineLearningCode\\MachineLearningCode.csproj|solutionrelative:machinelearningcode\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -45,59 +41,46 @@
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\GitHub\\ML\\MachineLearningCode\\MachineLearningCode\\Program.cs",
-              "RelativeDocumentMoniker": "MachineLearningCode\\Program.cs",
-              "ToolTip": "D:\\GitHub\\ML\\MachineLearningCode\\MachineLearningCode\\Program.cs",
-              "RelativeToolTip": "MachineLearningCode\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-16T17:18:27.341Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Week2.cs",
-              "DocumentMoniker": "D:\\GitHub\\ML\\MachineLearningCode\\MachineLearningCode\\Week2.cs",
-              "RelativeDocumentMoniker": "MachineLearningCode\\Week2.cs",
-              "ToolTip": "D:\\GitHub\\ML\\MachineLearningCode\\MachineLearningCode\\Week2.cs",
-              "RelativeToolTip": "MachineLearningCode\\Week2.cs",
-              "ViewState": "AgIAAI0AAAAAAAAAAAAwwJwAAABGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-14T16:36:12.56Z",
-              "EditorCaption": ""
-            },
-            {
               "$type": "Bookmark",
               "Name": "ST:0:0:{c6f34f0d-7ae5-4f3a-be61-fe0c21ae9eb8}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DataRegression.cs",
-              "DocumentMoniker": "D:\\GitHub\\ML\\MachineLearningCode\\MachineLearningCode\\Data\\DataRegression.cs",
-              "RelativeDocumentMoniker": "MachineLearningCode\\Data\\DataRegression.cs",
-              "ToolTip": "D:\\GitHub\\ML\\MachineLearningCode\\MachineLearningCode\\Data\\DataRegression.cs",
-              "RelativeToolTip": "MachineLearningCode\\Data\\DataRegression.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAADwvzgAAAA6AAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "GreetingPlugin.cs",
+              "DocumentMoniker": "D:\\GitHub\\ML\\MachineLearningCode\\MachineLearningCode\\GreetingPlugin.cs",
+              "RelativeDocumentMoniker": "MachineLearningCode\\GreetingPlugin.cs",
+              "ToolTip": "D:\\GitHub\\ML\\MachineLearningCode\\MachineLearningCode\\GreetingPlugin.cs",
+              "RelativeToolTip": "MachineLearningCode\\GreetingPlugin.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAgwB8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-16T15:43:16.396Z",
+              "WhenOpened": "2026-06-28T15:07:51.729Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Models.cs",
-              "DocumentMoniker": "D:\\GitHub\\ML\\MachineLearningCode\\MachineLearningCode\\Models.cs",
-              "RelativeDocumentMoniker": "MachineLearningCode\\Models.cs",
-              "ToolTip": "D:\\GitHub\\ML\\MachineLearningCode\\MachineLearningCode\\Models.cs",
-              "RelativeToolTip": "MachineLearningCode\\Models.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAawEUAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\GitHub\\ML\\MachineLearningCode\\MachineLearningCode\\appsettings.json",
+              "RelativeDocumentMoniker": "MachineLearningCode\\appsettings.json",
+              "ToolTip": "D:\\GitHub\\ML\\MachineLearningCode\\MachineLearningCode\\appsettings.json",
+              "RelativeToolTip": "MachineLearningCode\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-06-28T14:55:04.603Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\GitHub\\ML\\MachineLearningCode\\MachineLearningCode\\Program.cs",
+              "RelativeDocumentMoniker": "MachineLearningCode\\Program.cs",
+              "ToolTip": "D:\\GitHub\\ML\\MachineLearningCode\\MachineLearningCode\\Program.cs",
+              "RelativeToolTip": "MachineLearningCode\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwC0AAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-16T15:25:43.043Z",
+              "WhenOpened": "2026-06-20T15:23:39.428Z",
               "EditorCaption": ""
             }
           ]
